@@ -1,0 +1,7 @@
+<div>
+    <h2>Child Component</h2>
+    <p>current value of show is : {{show}}</p>
+    <label for="object-input" > New Object</label>
+    <input type="text" id="object-input" #objectElement>
+    <button (click)="addnewObject(objectElement.value)" >Add</button>
+</div>
