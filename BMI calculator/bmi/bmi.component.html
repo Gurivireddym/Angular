@@ -1,0 +1,54 @@
+<div class="bg">
+<div class="border main-container" align="flex" >
+    <form  [formGroup]="bmiform" (ngSubmit)="bmicalculation()">
+        <div>
+          <h1><strong>BMI Calculator</strong></h1>
+        </div><div>
+          <div class="border age">
+            <h4 align="center">Age</h4>
+            <input type="number" class="border input" formControlName="age">
+            <div *ngIf="bmiform.get('age')?.touched && bmiform.get('age')?.hasError('required')" >Age required</div>
+            <div *ngIf="bmiform.get('age')?.touched && bmiform.get('age')?.hasError('minLength')" >Age required</div>
+            <div *ngIf="bmiform.get('age')?.touched && bmiform.get('age')?.hasError('maxLength')" >Age required</div>
+            <div *ngIf="bmiform.get('age')?.touched && bmiform.controls['age'].errors?.['age']" >Age limit is 0-100</div>
+
+          </div>
+          <div class="border gender" >
+            <label for="m" class="border container">
+                <input type="radio" name="gender" id="m" formControlName="gender" value="male">
+                Male
+            </label>
+            <label for="f" class="border container">
+                <input type="radio" name="gender" id="f" formArrayName="gender" value="female">
+                Female
+            </label>
+            <div *ngIf="bmiform.get('gender')?.touched && bmiform.get('gender')?.invalid" >Gender is required</div>
+
+        </div>
+        <div class="border heightweight"> 
+            <div class="border heightcm">
+                <label for="height">Height(cm)</label>
+                <input type="number" id="height" formControlName="hgt" >
+                <div *ngIf="bmiform.get('hgt')?.touched && bmiform.get('hgt')?.hasError('required')" >Height is required</div>
+
+            </div>
+            <div class="border weightkg">
+                <label for="weight">Weight(kg)</label>
+                <input type="number" id="weight" formControlName="wgt" >
+                <div *ngIf="bmiform.get('wgt')?.touched && bmiform.get('wgt')?.dirty && bmiform.get('wgt')?.hasError('required')" >Weight is required</div>
+
+            </div>
+        </div>
+        
+        <button type="submit" class="border button"  ><strong>Calculate BMI</strong></button>
+        <!--<button type="button" (click)="resetForm()">Reset</button>-->
+    </div></form>
+        <div >
+            <h2>Your BMI is</h2>
+            <div *ngIf="bmi" class="res result" id="result">{{bmi}}</div>
+
+        </div>
+        <div class="res stage">{{stage}}</div>
+        
+    </div>
+</div>

@@ -1,0 +1,127 @@
+
+.main-container{
+    margin:auto;
+    width: 35%;
+    background-color: beige;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px rgb(125, 120, 120);
+    padding: 10px;
+}
+.border{
+  border-radius: 12px;
+}
+.main-container:hover{background-attachment: fixed;
+background-color: #a6c2ec;}
+.gender{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 20px 0PX 10px;
+  margin-bottom: 20px;
+}
+.gender .container{
+    position: relative;
+    width: 50%;
+    flex-direction: row;
+    font-size: large;
+    justify-content: center;
+}
+.gender .container input{
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.age{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: flex;
+    width: 400px;
+    height: 30px;
+    background-color: #b9afd6; 
+    text-align: center;
+    display: inline-block;
+    color: red;
+  }
+  .button:hover {background-color: #dce3bc;
+}
+  .input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(128, 128, 242);
+    height: 35px;
+    font-size: large;
+    align-items: center;
+    text-align: center;
+    
+  }
+  .heightweight{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items:center ;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    padding: 15px 0px 0px 10px;
+    background-color: aliceblue;
+    height: 100px;
+    flex-direction: row;
+  }
+  
+  .heightweight input{
+        display: flex;
+        margin: auto;
+        padding: 5px 0px 0px 0px;
+        width: 50%;
+        flex-direction: column;
+        font-size: large;
+        border-radius: 12px;
+        border: none;
+        border-bottom: 1px solid rgb(128, 128, 242);
+        outline: none;
+        text-align: center;
+  }
+  
+  .res{
+    font-family:Arial, Helvetica, sans-serif;
+    align-items: center;
+    font-weight: 900;
+    display: inline-block;
+    padding: 7px 20px;
+    border-radius: 55px;
+    margin-bottom: 25px;
+    height: 50px;
+    width: 100px;
+  }
+  .result{
+    font-size: 35px;
+    color: #4f7df9;
+    background-color: #eaeaea;
+  }
+  .bg{
+    background-color: #386ae8;
+    position: relative;
+  }
+  .main-container input.ng-touched.ng-valid{
+    border: 2px solid forestgreen;
+    
+  }
+  .main-container .heightweight input.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }
+
+  .stage{
+    font-size: 15px;
+    color: red;
+    background-color: #eaeaea;
+    text-align: center;
+  }
