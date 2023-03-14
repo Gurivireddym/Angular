@@ -1,0 +1,15 @@
+<app-heading></app-heading>
+<div appHighlight class="main-container">
+    <h2>Parent Component</h2>
+    <p>Two way binding example:</p>
+    <input type="text" [(ngModel)]="title">
+    <h3>{{title}}</h3>
+    <h5>Objects list</h5>
+  
+    <ul *ngFor="let obj of objs">
+      <li *ngIf="obj !=''">{{obj}}
+      </li>
+    </ul>
+    
+  <!--<app-object [obj1]="title" (newObj)="addNewObject($event)"></app-object>-->
+  </div>

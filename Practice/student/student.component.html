@@ -1,0 +1,25 @@
+<app-heading></app-heading>
+<div class="main-container">
+    <table style="width:100%">
+        <tr><th>Name</th>
+        <th>Institution</th>
+        <th>Address</th>
+        </tr>
+        <tr><td>Gowtham</td>
+        <td>JNTU</td>
+        <td>Hyd</td>
+    </tr>
+</table>
+</div>
+<h3 align="center"><strong>Student Form</strong></h3>
+<div appHighlight class="main-container">
+    <form align="center" [formGroup]="sform">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" formControlName="sname" class="form-control w-50 m-2"><br><br>
+        <label for="clg">Institution Name:</label>
+        <input type="text" id = "clg" formControlName="clgname" class="form-control w-50 m-2"><br><br>
+        <label for="addr">Address:</label>
+        <input type="text" id="addr" formControlName="address" class="form-control w-50 m-2" ><br><br>
+        <button type="button" value="submit" class="btn btn-primary m-2">Submit</button>
+    </form>
+</div>

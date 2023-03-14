@@ -1,0 +1,28 @@
+<div class="card-container" >
+<div class="card-body" fxFlexFill>
+    <form #loginform="ngForm" >
+    <div class="card" >
+        
+        <h3><strong>User Login </strong></h3>
+    <label for="uname"  >Username</label>
+    <input type="text" id="uname" placeholder="Enter username" class="form-control w-50 m-2" ngModel name="username" #un="ngModel" minlength="4" maxlength="20" required>
+    
+    <ng-container *ngIf="un.touched">
+    <p class="error-msg m-2" *ngIf="un.errors?.['required']">Username required</p>
+    <p class="error-msg m-2" *ngIf="un.errors?.['minlength']">Username must be include minimum 4 letters</p>
+    </ng-container>
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" class="form-control w-50 m-2" ngModel name="pwd" #pwd="ngModel" minlength="6" maxlength="20" required>
+ 
+    <ng-container *ngIf="un.touched">
+        <p class="error-msg m-2" *ngIf="pwd.errors?.['required']">password required</p>
+        <p class="error-msg m-2" *ngIf="pwd.errors?.['minlength']">password must be include minimum 6 letters</p>
+        </ng-container>
+
+    <button type="button" (click)="submit(loginform)"  class ="button" routerLinkActive="active" routerLink="../parentcomponent">Login</button>
+    <span>Create New Account&emsp;<a routerLink="../signup">Signup</a></span>
+</div>
+</form>
+</div>
+</div>

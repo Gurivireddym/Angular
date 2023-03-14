@@ -1,0 +1,14 @@
+<app-heading></app-heading>
+<h2 align="center">User Details</h2>
+<form >
+    <table align="center"><tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th></tr>
+        <tr *ngFor="let user of users | async">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </table>
+</form>

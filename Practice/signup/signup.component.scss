@@ -1,0 +1,101 @@
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 50px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card.card-small {
+  height: 16px;
+  width: 268px;
+}
+
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+  fill: rgb(105, 103, 103);
+}
+
+.card.highlight-card {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+}
+
+.card.card.highlight-card span {
+  margin-left: 100px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  text-align: center;
+  display: inline-block;
+  border-radius: 12px;
+}
+.button:hover {background-color: #84b5e0}
+.main-container{
+  width: 960px;
+  margin: 10px auto;
+  
+}
+input.ng-touched.ng-valid{
+  border: 2px solid forestgreen;
+  
+}
+input.ng-touched.ng-invalid{
+  border: 2px solid red;
+}
+.error-msg{
+  color: red;
+}
+.input{
+  border-radius: 15px;
+}
+div~label{
+    flex-direction: left;
+    float: left;
+    flex:50%;
+}
+div~input{
+    flex:50%;
+    float: right;
+    position: relative;
+  }
+.decorate{
+  color: red;
+}

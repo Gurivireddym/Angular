@@ -1,0 +1,40 @@
+
+<div class="card-container">
+    <div class="card-body">
+        
+        <form [formGroup]="signup">
+            <div class="card">
+                <h1 align="center"> Sign Up</h1>
+                <label for="uname">Enter your Username:</label>
+                <input type="text" placeholder="Enter username" id="uname" formControlName="uname" class="form-control w-50 m-2">
+                 <div *ngIf="signup.get('uname')?.touched && signup.get('uname')?.hasError('required')" class="decorate">Username required</div>
+                 <div *ngIf="signup.get('uname')?.touched && signup.get('uname')?.hasError('minlength')" class="decorate">Enter valid Username</div>
+                 <div *ngIf="signup.get('uname')?.touched && signup.get('uname')?.errors?.['duplicateusr']" class="decorate">Username already Exist</div>
+
+                 <label for="email">Enter your Email:</label>
+                <input type="email" id="email" placeholder="Enter email"  formControlName="email" class="form-control w-50 m-2" >
+                <div *ngIf="signup.get('email')?.touched && signup.get('email')?.hasError('required')" class="decorate">Enter valid Email Address</div>
+                <div *ngIf="signup.controls['email']?.touched && signup.controls['email'].errors?.['minlength']" class="decorate">Enter valid Email Address</div>
+
+                <div formArrayName="mobilenums">
+                    <div *ngFor="let m of signup.controls['mobilenums']['controls']; let i= index" class="d-flex">
+                        <label for="mobile">Enter your mobile number {{i+1}}:</label>
+                <input type="tel" id="mobile" placeholder="enter mobile number" formControlName="{{i}}" class="form-control w-50 m-2" >
+                
+                    </div>
+                </div>
+                <button (click)="addnewmobile()" >add new mobile</button>
+
+                <label for="password">Enter your Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" minlength="6" maxlength="20" formControlName="pwd" class="form-control w-50 m-2" >
+                
+                <div *ngIf="signup.get('pwd')?.touched && signup.get('pwd')?.hasError('required')" class="decorate">Enter valid Password</div>
+                <div *ngIf="signup.get('pwd')?.touched && signup.get('pwd')?.hasError('minlength')" class="decorate">Enter valid Password</div>
+                <div *ngIf="signup.get('pwd')?.touched && signup.get('pwd')?.errors?.['noupper']" class="decorate">Password must contain one uppercase letter</div>
+
+                <br>
+                <button class="button" (click)="show()" class="btn btn-primary m-2">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>

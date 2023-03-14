@@ -1,0 +1,28 @@
+h3{
+    color: chocolate;
+}
+th{
+    text-align: center;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    color: red;
+    background-color: beige;
+}
+table,  td {
+    text-align: center;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    
+  }
+  .main-container{
+    width: 960px;
+    margin: 10px auto;
+    
+}
+input.ng-touched.ng-valid{
+    border: 2px solid forestgreen;
+    
+  }
+  input.ng-touched.ng-invalid{
+    border: 2px solid red;
+  }

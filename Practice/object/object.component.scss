@@ -1,0 +1,116 @@
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  
+  .card.card-small {
+    height: 16px;
+    width: 268px;
+  }
+
+  
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    text-align: center;
+    display: inline-block;
+    border-radius: 12px;
+  }
+  .button:hover {background-color: #84b5e0}
+  .main-container{
+    width: 960px;
+    margin: 10px auto;
+    background-color: wheat;
+    border-radius: 12px;
+}
+.main-container{
+  width: 960px;
+  margin: 10px auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  
+  align-items: center;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #bdf0ac;
+  border-radius: 12px;
+}
+
+/* Change the link color  on hover */
+li a:active{
+  background-color: #8abde4;
+}
+li a:hover {
+  background-color: #8abde4;
+}

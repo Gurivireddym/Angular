@@ -1,0 +1,50 @@
+<div align="center">
+    <div class="nav-container">
+        <ul>
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/parentcomponent">Parent component</a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/objectcomponent">Object component</a></li><!-- localhost:4200/Home -->
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/studentcomponent">Student component</a></li>
+          </ul>
+    </div>
+   
+  </div>
+
+<div class="main-container">
+    <h3>List of Objects:</h3>
+    <ul *ngFor="let obj of objs">
+        <li *ngIf="obj !=''">{{obj}}
+        </li>
+      </ul>
+    <div class="card-container">
+        <div class="card-header">
+            <h3>Object Component</h3>
+        </div>
+        <div class="card-body">
+            <div class="card">
+
+            <label for="object-input">Passed value:</label>
+            <input type="text" id="object-input" #Object>
+            <button type="button"  class ="button" (click)="addNewObject(Object.value)"  >Add</button>
+            
+        </div>
+            
+        </div>
+    </div>
+</div>
+
+<div appHighlight class="main-container">
+    <button type="button" (click)="getobjlistinfo1()">Object List1</button>
+    <ul>
+        <li *ngFor="let obj of recievedObj1">{{obj}}</li>
+    </ul>
+    <button type="button" (click)="getobjlistinfo2()">Object List2</button>
+    <ul>
+        <li *ngFor="let obj of recievedObj2">{{obj}}</li>
+    </ul>
+    <button type="button" (click)="getobjlistinfo3()">Object List3</button>
+    <ul>
+        <li *ngFor="let obj of recievedObj3">{{obj}}</li>
+    </ul>
+
+</div>
+<router-outlet></router-outlet>
