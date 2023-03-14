@@ -1,0 +1,19 @@
+
+<h2 align="center">User Details</h2>
+<form >
+    <table align="center"><tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th></tr>
+        <tr *ngFor="let user of users ">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.title}}</td>
+            <td>{{user.body}}</td>
+        </tr>
+    </table>
+</form>
+<button (click)="addUser()"> add user</button>&nbsp;
+<button (click)="getUser()"> get user</button>&nbsp;
+<button (click)="updateUser()">update user</button>&nbsp;
+<button (click)="deleteUser()">delete user</button><br><br>
+<button align="center" (click)="updatedData()">get Updated data</button>
